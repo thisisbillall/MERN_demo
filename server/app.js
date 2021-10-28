@@ -25,6 +25,7 @@ res.send("Hello world from Homepage/ server");
 
 app.get('/about',middleware,(req,res)=>{
 console.log("About Activated!!");
+res.cookie("testJWT","about-cookie");
 res.send("Hello from ABOUT");
 });
 
@@ -32,7 +33,7 @@ app.get('/contacts',(req,res)=>{
 res.send("Hello world from CONTACTS");
 });
 
-app.get('/signup',(req,res)=>{
+app.get('/register',(req,res)=>{
 res.send("Hello world from SIGNUP");
 });
 
